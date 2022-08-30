@@ -1,9 +1,12 @@
+import Footer from './SharedComponents/Footer'
+
 function App() {
   return (
     <div className="App">
-      <header>
+      <nav>
         <h1>InPlease App</h1>
-      </header>
+      </nav>
+      <Footer />
     </div>
   )
 }
