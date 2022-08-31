@@ -1,0 +1,104 @@
+@media (min-width: 450px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    &-left{
+        display: flex;
+        &-linkedin {
+            margin-right: 8px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+          }
+        &-github {
+            margin-right: 8px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+          }
+        &-link {
+            margin-left: 3px;
+            width: 10px;
+          }
+         
+        
+      }
+  }
+}
+@media (max-width: 450px) {
+    .footer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      &-right {
+          text-align: right;
+      }
+      &-left {
+          display: flex;
+          &-linkedin {
+              margin-right: 7px;
+              margin-top: 2px;
+              margin-bottom: 2px;
+              display: flex;
+              flex-direction: row;
+              align-items: flex-start;
+          }
+          &-github {
+              margin-right: 7px;
+              margin-top: 2px;
+              margin-bottom: 2px;
+              display: flex;
+              flex-direction: row;
+              align-items: flex-start;
+          }   
+          &-link {
+              margin-left: 3px;
+              width: 8px;
+          }
+        }   
+    }
+  }
+  @media (max-width: 350px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      &-right {
+          text-align: right;
+      }
+      &-left {
+          display: flex;
+          flex-direction: column;
+          &-linkedin {
+              margin-right: 7px;
+              margin-top: 2px;
+              margin-bottom: 2px;
+              display: flex;
+              flex-direction: row;
+              align-items: flex-start;
+          }
+          &-github {
+              margin-right: 7px;
+              margin-top: 2px;
+              margin-bottom: 2px;
+              display: flex;
+              flex-direction: row;
+              align-items: flex-start;
+          }   
+          &-link {
+              margin-left: 3px;
+              width: 8px;
+          }
+        }   
+    }
+  }
+  

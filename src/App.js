@@ -1,9 +1,10 @@
+//Components
+import Footer from './components/Footer'
+
 function App() {
   return (
     <div className="App">
-      <header>
-        <h1>InPlease App</h1>
-      </header>
+      <Footer />
     </div>
   )
 }
