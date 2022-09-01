@@ -1,8 +1,5 @@
 // assets
 import link_image from '../assets/link_image.svg'
-import '../assets/style/footer.scss'
-import '../assets/style/_typography.scss'
-import '../assets/style/_colors.scss'
 
 function Footer() {
   return (

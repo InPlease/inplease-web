@@ -1,42 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@media (min-width: 450px) {
-  .footer {
-    font-family: 'Roboto', sans-serif;
+@font-face {
+  font-family: Robot-Light;
+  src: url('../fonts/Roboto-Light.ttf');
+}
 
-    &-left-text {
-      font-size: 15px;
-      word-spacing: 0.3;
-    }
-    &-right-copyright {
-      font-size: 15px;
-      font-family: 'Roboto', sans-serif;
-      text-align: right;
-    }
-  }
+@font-face {
+  font-family: Robot-Light;
+  src: url('../fonts/Roboto-LightItalic.ttf');
 }
-@media (max-width: 450px) {
-  .footer {
-    font-family: 'Roboto', sans-serif;
-    &-right-copyright {
-      font-size: 14px;
-      text-align: right;
-    }
-    &-left-text {
-      font-size: 11px;
-      word-spacing: 0.3;
-    }
-  }
+
+@font-face {
+  font-family: Robot-Regular;
+  src: url('../fonts/Roboto-Regular.ttf');
 }
-@media (max-width: 350px) {
-  .footer {
-    font-family: 'Roboto', sans-serif;
-    &-right-copyright {
-      font-size: 14px;
-      text-align: right;
-    }
-    &-left-text {
-      font-size: 11px;
-      word-spacing: 0.3;
-    }
-  }
+
+@font-face {
+  font-family: Robot-Regular-Italic;
+  src: url('../fonts/Roboto-Regular.ttf');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Robot-Medium;
+  src: url('../fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+  font-family: Robot-Medium;
+  src: url('../fonts/Roboto-MediumItalic.ttf');
+}
+
+@font-face {
+  font-family: Robot-Bold;
+  src: url('../fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+  font-family: Robot-Bold-Italic;
+  src: url('../fonts/Roboto-BoldItalic.ttf');
+}
+
+@font-face {
+  font-family: Robot-Black;
+  src: url('../fonts/Roboto-Black.ttf');
+}
+
+@font-face {
+  font-family: Robot-Black-Italic;
+  src: url('../fonts/Roboto-BlackItalic.ttf');
 }
