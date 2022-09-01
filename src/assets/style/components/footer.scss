@@ -16,25 +16,23 @@
   color: $white-color;
 }
 
-.footer {
-  @include footerDefaultGroup;
+.footer { 
+   @include footerDefaultGroup;
 
-  &-right-copyright {
-    @include textGroup;
-  }
-  &-left-text {
-    @include textGroup;
-  }
-}
-
-@media (max-width: 450px) {
-  .footer {
     &-right {
       text-align: right;
+      
+      &-copyright {
+        @include textGroup;
+      }
     }
 
     &-left {
       display: flex;
+
+      &-text {
+        @include textGroup;
+      }
 
       &-linkedin {
         @include itemMaxBreakGroup(8px);
@@ -49,9 +47,8 @@
       }
     }
   }
-}
 
-@media (max-width: 350px) {
+@media (max-width: 428px) {
   .footer {
     &-right {
       text-align: right;
