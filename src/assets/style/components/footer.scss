@@ -1,0 +1,77 @@
+@mixin itemMaxBreakGroup($margin) {
+  margin-right: $margin;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+@mixin linkGroup {
+  margin-left: 3px;
+  width: 8px;
+}
+
+@mixin textGroup {
+  color: $white-color;
+}
+
+.footer {
+  @include footerDefaultGroup;
+
+  &-right-copyright {
+    @include textGroup;
+  }
+  &-left-text {
+    @include textGroup;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer {
+    &-right {
+      text-align: right;
+    }
+
+    &-left {
+      display: flex;
+
+      &-linkedin {
+        @include itemMaxBreakGroup(8px);
+      }
+
+      &-github {
+        @include itemMaxBreakGroup(8px);
+      }
+
+      &-link {
+        @include linkGroup;
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .footer {
+    &-right {
+      text-align: right;
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+
+      &-linkedin {
+        @include itemMaxBreakGroup(7px);
+      }
+
+      &-github {
+        @include itemMaxBreakGroup(7px);
+      }
+
+      &-link {
+        @include linkGroup;
+      }
+    }
+  }
+}
