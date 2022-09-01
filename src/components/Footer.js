@@ -1,5 +1,5 @@
 // assets
-import link_image from '../assets/link_image.svg'
+import link_image from '../assets/img/icon/link_image.svg'
 
 function Footer() {
   return (
