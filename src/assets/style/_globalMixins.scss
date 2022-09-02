@@ -5,3 +5,8 @@
   align-items: center;
   background-color: $black-color;
 }
+@mixin aboutDefaulGroup {
+  display: flex;
+  flex-direction: column;
+  background-color: $black-color;
+}

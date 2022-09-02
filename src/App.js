@@ -1,10 +1,10 @@
 //Components
-import Footer from './components/Footer'
+import AboutUs from './components/aboutUs'
 
 function App() {
   return (
     <div className="App">
-      <Footer />
+      <AboutUs />
     </div>
   )
 }

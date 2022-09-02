@@ -1,0 +1,145 @@
+@mixin textGroup {
+    color: $white-color;
+  }
+
+.about{
+    @include aboutDefaulGroup;
+
+    &-components{
+       margin-left: 40.5px;
+       margin-right: 40.5px;
+        @include textGroup()
+    }
+
+    &-title{
+        font-size: 35px;
+        text-align: center;
+        font-family: Robot-Medium;
+        margin-top: 46px;
+        margin-bottom: 46px;
+
+     &-textColor {
+        color: $green-color;
+        size: 72px;
+        word-spacing: 0.3;
+        
+      }
+    }
+
+    &-paragraf{
+        margin-bottom: 56px;
+        font-size: 14px;
+        text-align: center;
+       
+        
+    }
+
+    &-sections{
+        margin-bottom: 145px;
+        &-creativity{
+            &-title{
+            margin-bottom: 47px;
+            font-size: 48px;
+
+        }
+        &-firstTitle{
+            font-size: 24px;
+            font-family: Robot-Medium;
+            margin-bottom: 27px;
+        }
+        
+        &-secondTitle{
+            font-size: 24px;
+            font-family: Robot-Medium;
+            margin-bottom: 27px;
+        }
+        &-firstContent{
+            font-size: 14px;
+            margin-bottom: 27px;
+        }
+
+        &-secondContent{
+            font-size: 14px;
+            margin-bottom: 51px;
+        }
+    }
+
+    &-tecnology{
+        &-title{
+        margin-bottom: 47px;
+        font-size: 48px;
+
+    }
+    &-firstTitle{
+        font-size: 24px;
+        font-family: Robot-Medium;
+        margin-bottom: 27px;
+    }
+    
+    &-secondTitle{
+        font-size: 24px;
+        font-family: Robot-Medium;
+        margin-bottom: 27px;
+    }
+    &-firstContent{
+        font-size: 14px;
+        margin-bottom: 27px;
+    }
+
+    &-secondContent{
+        font-size: 14px;
+    }
+}
+    
+        
+}
+    &-ourFamily{
+        display: flex;
+        flex-direction: column;
+       
+       &-title{
+        text-align: center;
+        font-size: 48px;
+        font-family: Roboto-Thin-Italic;
+       }
+        
+        &-img{
+            width: 100%;
+            margin-top: 54px;
+            margin-bottom: 54px;
+            align-items: center;
+        }
+       &-personIfo{
+        font-size: 24px;
+       }
+
+    }
+    &-lema{
+        margin-top: 58px;
+        margin-bottom: 58px;
+        font-size: 18px;
+        margin-right: 25px;
+        margin-left: 25px;
+        text-align: center;
+    }
+
+    &-button{
+        display: flex;
+        justify-content: center;
+        margin-top: 52px;
+        margin-bottom: 52px;
+        &-Contact {
+            color: $white-color;
+            background-color: $black-color;
+            border-color: $green-color;
+            border-radius: 20px;
+            width: 250px;
+            height: 42px;
+            font-size: 13px;
+           
+          }
+      }
+
+}
+
+  
