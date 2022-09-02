@@ -1,5 +1,7 @@
+// assets
 import link_image from '../assets/img/icon/InPlease.svg'
 import link_image_responsive from '../assets/img/icon/inplease-logo-mobile.svg'
+
 function Navbar() {
   return (
     <div className="navbar">
