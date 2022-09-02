@@ -1,0 +1,44 @@
+//Mixins
+@mixin textLinks {
+  color: $white-color;
+}
+
+@mixin funcionality($rogue) {
+  display: $rogue;
+}
+
+//Navbar
+.navbar {
+  @include navbarDefaultGroup;
+
+  &__right {
+    @include textLinks;
+  }
+
+  &__left {
+    &-img-responsive {
+      @include funcionality(none);
+    }
+  }
+}
+
+//Media Query
+@media (max-width: 450px) {
+  .navbar {
+    @include navbarDefaultGroup;
+
+    &__right {
+      @include textLinks;
+    }
+
+    &__left {
+      &-img {
+        @include funcionality(none);
+      }
+
+      &-img-responsive {
+        @include funcionality(initial);
+      }
+    }
+  }
+}
