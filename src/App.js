@@ -1,12 +1,5 @@
-//Components
-import Footer from './components/Footer'
-
 function App() {
-  return (
-    <div className="App">
-      <Footer />
-    </div>
-  )
+  return <div className="App"></div>
 }
 
 export default App
