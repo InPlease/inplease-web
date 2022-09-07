@@ -14,7 +14,6 @@
   display: flex;
   gap: 50px;
   justify-content: center;
-  align-items: center;
 }
 
 @mixin button {
@@ -25,28 +24,38 @@
   border-radius: 50%;
 }
 
+@mixin container {
+  display: flex;
+  justify-content: space-between;
+  height: 54px;
+  align-items: center;
+}
+
 //Navbar
 .navbar {
   @include navbarDefaultGroup;
 
-  //left
-  &__left {
-    &-img-responsive {
-      @include funcionality(none);
+  &__container {
+    @include container();
+    //left
+    &-left {
+      &-img-responsive {
+        @include funcionality(none);
+      }
+
+      &-img {
+        width: 98px;
+        height: 29px;
+      }
     }
 
-    &-img {
-      width: 98px;
-      height: 29px;
-    }
-  }
+    //right
+    &-right {
+      @include information();
 
-  //right
-  &__right {
-    @include information();
-
-    &-button {
-      @include button();
+      &-button {
+        @include button();
+      }
     }
   }
 }
@@ -54,20 +63,23 @@
 //Media Query
 @media (max-width: 450px) {
   .navbar {
-    @include navbarDefaultGroup;
-    //left
-    &__left {
-      &-img {
+    &__container {
+      @include container();
+      @include navbarDefaultGroup;
+      //left
+      &-left {
+        &-img {
+          @include funcionality(none);
+        }
+
+        &-img-responsive {
+          @include funcionality(initial);
+        }
+      }
+      //right
+      &-right-information {
         @include funcionality(none);
       }
-
-      &-img-responsive {
-        @include funcionality(initial);
-      }
-    }
-    //right
-    &__right-information {
-      @include funcionality(none);
     }
   }
 }

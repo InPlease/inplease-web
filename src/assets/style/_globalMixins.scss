@@ -9,12 +9,8 @@
 
 /* NAVBAR */
 @mixin navbarDefaultGroup {
-  height: 54px;
-  display: flex;
+  height: 90px;
   max-width: 1206;
-  margin: 0 auto;
-  padding: 30px;
-  justify-content: space-between;
-  align-items: center;
+  margin: 0 41px 0 41px;
   background-color: $black-color;
 }
