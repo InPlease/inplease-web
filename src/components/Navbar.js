@@ -20,7 +20,12 @@ function Navbar() {
             id="img"
           />
         </div>
-        <div className="navbar__right"></div>
+        <div className="navbar__right">
+          <p className="navbar__right-information">
+            (57) 3053165774 - jhornan@in-please-com
+          </p>
+          <i className="navbar__right-button"></i>
+        </div>
       </div>
     </nav>
   )

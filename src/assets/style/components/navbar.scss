@@ -7,13 +7,46 @@
   display: $rogue;
 }
 
+@mixin information {
+  color: $white-color;
+  font-size: 13px;
+  font-weight: 400;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button {
+  content: '';
+  height: 8px;
+  width: 8px;
+  background-color: #10c64e;
+  border-radius: 50%;
+}
+
 //Navbar
 .navbar {
   @include navbarDefaultGroup;
 
+  //left
   &__left {
     &-img-responsive {
       @include funcionality(none);
+    }
+
+    &-img {
+      width: 98px;
+      height: 29px;
+    }
+  }
+
+  //right
+  &__right {
+    @include information();
+
+    &-button {
+      @include button();
     }
   }
 }
@@ -22,7 +55,7 @@
 @media (max-width: 450px) {
   .navbar {
     @include navbarDefaultGroup;
-
+    //left
     &__left {
       &-img {
         @include funcionality(none);
@@ -31,6 +64,10 @@
       &-img-responsive {
         @include funcionality(initial);
       }
+    }
+    //right
+    &__right-information {
+      @include funcionality(none);
     }
   }
 }

@@ -8,11 +8,13 @@
 }
 
 /* NAVBAR */
-@mixin navbarDefaultGroup{
-  height: 29px;
+@mixin navbarDefaultGroup {
+  height: 54px;
   display: flex;
+  max-width: 1206;
+  margin: 0 auto;
+  padding: 30px;
   justify-content: space-between;
   align-items: center;
   background-color: $black-color;
 }
-
