@@ -2,10 +2,12 @@
 @import './_typography.scss';
 @import './_colors.scss';
 @import './globalMixins.scss';
+@import './breackPoints';
 
 // Components
 @import './components/footer.scss';
 @import './components/aboutUs.scss';
+@import './components/carousel.scss';
 
 * {
   margin: 0px;
