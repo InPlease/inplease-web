@@ -7,13 +7,55 @@
   display: $rogue;
 }
 
+@mixin information {
+  color: $white-color;
+  font-size: 13px;
+  font-weight: 400;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+@mixin button {
+  content: '';
+  height: 8px;
+  width: 8px;
+  background-color: #10c64e;
+  border-radius: 50%;
+}
+
+@mixin container {
+  display: flex;
+  justify-content: space-between;
+  height: 54px;
+  align-items: center;
+}
+
 //Navbar
 .navbar {
   @include navbarDefaultGroup;
 
-  &__left {
-    &-img-responsive {
-      @include funcionality(none);
+  &__container {
+    @include container;
+    //left
+    &-left {
+      &-img-responsive {
+        @include funcionality(none);
+      }
+
+      &-img {
+        width: 98px;
+        height: 29px;
+      }
+    }
+
+    //right
+    &-right {
+      @include information;
+
+      &-button {
+        @include button;
+      }
     }
   }
 }
@@ -21,15 +63,22 @@
 //Media Query
 @media (max-width: 450px) {
   .navbar {
-    @include navbarDefaultGroup;
+    &__container {
+      @include container;
+      @include navbarDefaultGroup;
+      //left
+      &-left {
+        &-img {
+          @include funcionality(none);
+        }
 
-    &__left {
-      &-img {
-        @include funcionality(none);
+        &-img-responsive {
+          @include funcionality(initial);
+        }
       }
-
-      &-img-responsive {
-        @include funcionality(initial);
+      //right
+      &-right-information {
+        @include funcionality(none);
       }
     }
   }
