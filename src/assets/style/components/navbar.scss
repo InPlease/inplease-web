@@ -37,8 +37,12 @@
 .navbar {
   @include navbarDefaultGroup;
 
-  &__container-right-button {
+  &__container-menu-button {
     cursor: pointer;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: $green-color;
   }
 
   &__container {
@@ -56,9 +60,18 @@
     }
 
     //right
-    &-right {
+    &-information {
       @include information;
 
+      &-hide {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+
+        .navbar__container-menu-button {
+          background-color: $red-color;
+        }
+      }
       &-button {
         @include button;
       }
@@ -83,8 +96,10 @@
         }
       }
       //right
-      &-right-information {
-        @include funcionality(none);
+      &-information {
+        &-paragraph {
+          @include funcionality(none);
+        }
       }
     }
   }
