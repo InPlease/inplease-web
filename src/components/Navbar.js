@@ -7,7 +7,7 @@ function Navbar({ showMenu, showMenuEvent }) {
     <nav>
       <div className="navbar">
         <div className="navbar__container">
-          {showMenu && (
+          {!showMenu && (
             <>
               <div className="navbar__container-left">
                 <img
@@ -27,12 +27,12 @@ function Navbar({ showMenu, showMenuEvent }) {
           )}
           <div
             className={
-              showMenu
+              !showMenu
                 ? 'navbar__container-information'
                 : 'navbar__container-information-hide'
             }
           >
-            {showMenu && (
+            {!showMenu && (
               <div className="navbar__container-information">
                 <p className="navbar__container-information-paragraph">
                   (57) 3053165774 - jhornan@in-please-com
