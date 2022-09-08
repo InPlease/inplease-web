@@ -36,7 +36,7 @@
   @include navbarDefaultGroup;
 
   &__container {
-    @include container();
+    @include container;
     //left
     &-left {
       &-img-responsive {
@@ -51,10 +51,10 @@
 
     //right
     &-right {
-      @include information();
+      @include information;
 
       &-button {
-        @include button();
+        @include button;
       }
     }
   }
@@ -64,7 +64,7 @@
 @media (max-width: 450px) {
   .navbar {
     &__container {
-      @include container();
+      @include container;
       @include navbarDefaultGroup;
       //left
       &-left {
