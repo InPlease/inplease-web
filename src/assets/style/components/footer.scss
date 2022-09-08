@@ -9,61 +9,125 @@
 
 @mixin linkGroup {
   margin-left: 3px;
-  width: 8px;
+  width: 6px;
+  height: 6.86px;
+  mix-blend-mode: normal;
 }
 
 @mixin textGroup {
   color: $white-color;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  font-family: Robot-Regular-Italic;  
 }
+@mixin textGroupCopy {
+  color: $white-color;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  font-family: Robot-Regular;
+}
+.copyright-spam{
+  margin-right:3px ;
+  @include textGroupCopy();
+}
+.footer {
+  @include footerDefaultGroup;
+  padding-left: 61px;
+  padding-bottom: 32px;
+  padding-right: 36px;
 
-.footer { 
-   @include footerDefaultGroup;
+  &-right {
+    text-align: right;
 
-    &-right {
-      text-align: right;
-      
-      &-copyright {
-        @include textGroup;
-      }
-    }
+    &-copyright {
+      @include textGroupCopy();
+      &-paragraf {
+        display: flex;
+        
 
-    &-left {
-      display: flex;
-
-      &-text {
-        @include textGroup;
-      }
-
-      &-linkedin {
-        @include itemMaxBreakGroup(8px);
-      }
-
-      &-github {
-        @include itemMaxBreakGroup(8px);
-      }
-
-      &-link {
-        @include linkGroup;
       }
     }
   }
 
-@media (max-width: 428px) {
+  &-left {
+    display: flex;
+    &-linkedinGithub{
+      display: flex;
+      flex-direction: column;
+
+    }
+    &-text {
+      @include textGroup;
+    }
+
+    &-linkedin {
+      @include itemMaxBreakGroup(8px);
+      
+      
+    }
+    &-behance {
+      @include itemMaxBreakGroup(7px);
+      
+    }
+
+    &-github {
+      @include itemMaxBreakGroup(8px);
+      
+    }
+
+    &-link {
+      @include linkGroup;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .copyright-spam {
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+    @include textGroupCopy();
+  }
   .footer {
+    padding-left: 41px;
+    padding-bottom: 32px;
+    padding-right: 41px;
     &-right {
       text-align: right;
+      &-copyright {
+        color: $white-color;
+        font-size: 14px;
+        font-weight: 300;
+        font-family: Robot-Regular;
+        line-height: 17px;
+        &-paragraf {
+          display: flex;
+        }
+      }
     }
 
     &-left {
       display: flex;
-      flex-direction: column;
+      &-linkedinGithub{
+        display: flex;
+        flex-direction: column;
+  
+      }
 
       &-linkedin {
         @include itemMaxBreakGroup(7px);
+        
       }
 
       &-github {
         @include itemMaxBreakGroup(7px);
+        
+      }
+      &-behance {
+        @include itemMaxBreakGroup(7px);
+       
       }
 
       &-link {
