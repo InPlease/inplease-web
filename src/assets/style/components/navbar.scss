@@ -8,12 +8,13 @@
 }
 
 @mixin information {
-  color: $white-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
   font-size: 13px;
   font-weight: 400;
-  display: flex;
-  gap: 50px;
-  justify-content: center;
+  color: $white-color;
 }
 
 @mixin button {
@@ -25,15 +26,20 @@
 }
 
 @mixin container {
+  width: 100%;
+  height: 54px;
   display: flex;
   justify-content: space-between;
-  height: 54px;
   align-items: center;
 }
 
 //Navbar
 .navbar {
   @include navbarDefaultGroup;
+
+  &__container-right-button {
+    cursor: pointer;
+  }
 
   &__container {
     @include container;
