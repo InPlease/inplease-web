@@ -1,0 +1,98 @@
+//Mixins
+@mixin textLinks {
+  color: $white-color;
+}
+
+@mixin funcionality($rogue) {
+  display: $rogue;
+}
+
+@mixin information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-size: 13px;
+  font-weight: 400;
+  color: $white-color;
+}
+
+@mixin container {
+  width: 100%;
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+//Navbar
+.navbar {
+  @include navbarDefaultGroup;
+
+  &__container-menu-button {
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: $green-color;
+  }
+
+  &__container {
+    @include container;
+    //left
+    &-left {
+      &-img-responsive {
+        @include funcionality(none);
+      }
+
+      &-img {
+        width: 98px;
+        height: 29px;
+      }
+    }
+
+    //right
+    &-information {
+      @include information;
+
+      &-hide {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+
+        .navbar__container-menu-button {
+          background-color: $red-color;
+        }
+      }
+      &-button {
+        @include ball-button;
+      }
+    }
+  }
+}
+
+//Media Query
+@media (max-width: 450px) {
+  .navbar {
+    &__container {
+      @include container;
+      @include navbarDefaultGroup;
+      //left
+      &-left {
+        &-img {
+          @include funcionality(none);
+        }
+
+        &-img-responsive {
+          @include funcionality(initial);
+        }
+      }
+      //right
+      &-information {
+        &-paragraph {
+          @include funcionality(none);
+        }
+      }
+    }
+  }
+}

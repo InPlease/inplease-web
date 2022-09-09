@@ -1,7 +1,31 @@
+/* GLOBAN SECTION PADDING */
+@mixin globalSectionPadding {
+  padding: 0px 17px 0px 17px;
+}
+
+/* FOOTER */
 @mixin footerDefaultGroup {
   height: 68.4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $black-color;
+}
+
+/* NAVBAR */
+@mixin navbarDefaultGroup {
+  max-width: 1206;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 0px 17px 0px 17px;
+  background-color: $black-color;
+}
+
+/* Ball Button */
+@mixin ball-button {
+  height: 8px;
+  width: 8px;
+  background-color: $green-color;
+  border-radius: 50%;
 }
