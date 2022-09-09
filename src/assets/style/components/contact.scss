@@ -4,7 +4,7 @@
   color: white;
 
   div {
-    max-width: 834px;
+    max-width: 746px;
   }
   h1 {
     span {
@@ -12,9 +12,16 @@
       margin: 0px 15px 0px 0px;
     }
   }
+  &__form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-width: inherit !important;
+    margin: 83px 0px 0px 0px;
+  }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 714px) {
   .contact {
     font-size: 36px;
     div {

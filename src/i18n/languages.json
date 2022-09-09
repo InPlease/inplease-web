@@ -8,6 +8,12 @@
           "2": "want",
           "3": "to be there with you, throughout the",
           "4": "process"
+        },
+        "formulary": {
+          "name": "Full name",
+          "email": "Email",
+          "phone": "Phone",
+          "submit": "Send"
         }
       }
     }
@@ -22,6 +28,12 @@
           "2": "estar",
           "3": "contigo a traves de todo el",
           "4": "proceso"
+        },
+        "formulary": {
+          "name": "Nombre completo",
+          "email": "Correo",
+          "phone": "Telefono",
+          "submit": "Enviar"
         }
       }
     }
