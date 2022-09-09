@@ -1,12 +1,29 @@
 {
   "en": {
     "translation": {
-      "menu": ["Home", "About Us", "Our Work", "Contact Us"]
+      "menu": ["Home", "About Us", "Our Work", "Contact Us"],
+      "contanct": {
+        "title": {
+          "1": "We",
+          "2": "want",
+          "3": "to be there with you, throughout the",
+          "4": "process"
+        }
+      }
     }
   },
   "es": {
     "translation": {
-      "menu": ["Inicio", "Nosotros", "Proyectos", "Contactanos"]
+      "menu": ["Inicio", "Nosotros", "Proyectos", "Contactanos"],
+      "contacTitlte": "Queremos estar contigo, durante todo el proceso",
+      "contanct": {
+        "title": {
+          "1": "Queremos",
+          "2": "estar",
+          "3": "contigo a traves de todo el",
+          "4": "proceso"
+        }
+      }
     }
   }
 }
