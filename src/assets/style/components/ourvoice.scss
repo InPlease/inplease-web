@@ -1,0 +1,123 @@
+@mixin h1Left {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@mixin items-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+@mixin items-post {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+@mixin items-content {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+@mixin items-links {
+  font-size: 12px;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+@mixin items-readers {
+  font-size: 12px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ourvoice {
+  @include ourVoiceDefaultGroup;
+  
+  
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    
+    
+
+    &-left {
+      &-title {
+        width: 70px;
+        @include h1Left;
+      }
+
+      &-post{
+          @include items-post;
+          @include funcionality(none);
+        
+      }
+    }
+
+    &-right {
+      display: flex;
+      gap: 35px;
+      width: 878px;
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 277px;
+        height: 131px;
+        position: relative;
+        &-content {
+          @include items-content;
+        }
+
+        &-title {
+          @include items-title;
+        }
+
+        
+
+        &-information {
+          display: flex;
+          flex-direction: column;
+          justify-self: flex-end;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          bottom: 0;
+          &-readers {
+            @include items-readers;
+          }
+          &-links {
+            @include items-links;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .ourvoice {
+    
+
+    &__container{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      &-left{
+        
+        
+        &-title{
+          color: $green-color;
+        }
+
+        &-post{
+          @include funcionality(initial);
+        }
+      }
+    }
+  }
+}
