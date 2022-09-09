@@ -6,8 +6,8 @@
 // Components
 @import './components/footer.scss';
 @import './components/navbar.scss';
-@import './components/ourvoice.scss';
-
+@import './components/menu.scss';
+@import './components/menu.scss';
 * {
   margin: 0px;
   padding: 0px;
@@ -19,4 +19,15 @@ body {
   width: 100%;
   height: 100%;
   font-family: Robot-Regular;
+  background-color: $black-color;
+}
+
+main,
+.App {
+  height: 100%;
+}
+
+.App {
+  display: grid;
+  grid-template-rows: 9.4% auto 7.1%;
 }

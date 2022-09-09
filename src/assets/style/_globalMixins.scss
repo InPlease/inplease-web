@@ -1,3 +1,8 @@
+/* GLOBAN SECTION PADDING */
+@mixin globalSectionPadding {
+  padding: 0px 17px 0px 17px;
+}
+
 /* FOOTER */
 @mixin footerDefaultGroup {
   height: 68.4px;
@@ -17,15 +22,21 @@
   background-color: $black-color;
 }
 
-/* OURVOICE SECTION */
-@mixin ourVoiceDefaultGroup {
-  background-color: $black-color;
-  color: $white-color;
-  height: 221px;
-  display: flex;
-  max-width: 1206px;
-  justify-content: start;
-  align-items: center;
-  margin: 0 auto;
-  
+/* Ball Button */
+@mixin ball-button {
+  height: 8px;
+  width: 8px;
+  background-color: $green-color;
+  border-radius: 50%;
+}
+
+// Anims
+@mixin hoverAnim {
+  opacity: 0.7;
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 1;
+    transform: 0.3s;
+  }
 }

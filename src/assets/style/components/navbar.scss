@@ -17,14 +17,6 @@
   color: $white-color;
 }
 
-@mixin button {
-  content: '';
-  height: 8px;
-  width: 8px;
-  background-color: #10c64e;
-  border-radius: 50%;
-}
-
 @mixin container {
   width: 100%;
   height: 54px;
@@ -37,8 +29,26 @@
 .navbar {
   @include navbarDefaultGroup;
 
-  &__container-right-button {
-    cursor: pointer;
+  &__container-menu-button {
+    width: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      @include hoverAnim;
+      width: 20px;
+      cursor: pointer;
+    }
+
+    div {
+      @include hoverAnim;
+      cursor: pointer;
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background-color: $green-color;
+    }
   }
 
   &__container {
@@ -56,11 +66,29 @@
     }
 
     //right
-    &-right {
+    &-information {
       @include information;
 
+      &-paragraph {
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+
+      &-hide {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        .navbar__container-menu-button {
+          div {
+            background-color: $red-color;
+          }
+        }
+      }
       &-button {
-        @include button;
+        @include ball-button;
       }
     }
   }
@@ -83,8 +111,14 @@
         }
       }
       //right
-      &-right-information {
-        @include funcionality(none);
+      &-information {
+        &-paragraph {
+          @include funcionality(none);
+        }
+      }
+
+      &-menu-button {
+        width: 40px;
       }
     }
   }
