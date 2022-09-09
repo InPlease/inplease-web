@@ -2,6 +2,35 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
+  &__success-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(0 0 0 / 65%);
+    cursor: pointer;
+
+    h1 {
+      margin: 15px;
+      font-size: 48px;
+      color: $green-color;
+      font-family: Robot-Medium;
+    }
+
+    p {
+      width: 356px;
+      margin: 0px;
+      font-family: Robot-Light-Italic;
+      font-size: 18px;
+      text-align: center;
+      color: $white-color;
+    }
+  }
   &__parent {
     width: 100%;
     max-width: 685px !important;

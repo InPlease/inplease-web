@@ -1,12 +1,16 @@
 // Dependecies
-import React from 'react';
+import React, { useState } from 'react';
 
 // Components
 import ContactForm from './Form';
+import FormSuccess from './FormSuccessScreen';
 
 const Contact = ({ translation }) => {
+  const [show, setShowSuccess] = useState(false);
   const { title, formulary } = translation;
-  console.log();
+  const showSuccessScreen = () => {
+    setShowSuccess(!show);
+  };
   return (
     <section className="contact">
       <div className="contact__title">
@@ -16,8 +20,12 @@ const Contact = ({ translation }) => {
         </h1>
       </div>
       <div className="contact__form">
-        <ContactForm translation={formulary} />
+        <ContactForm
+          translation={formulary}
+          showSuccScreen={showSuccessScreen}
+        />
       </div>
+      {show && <FormSuccess closeEvent={showSuccessScreen} />}
     </section>
   );
 };

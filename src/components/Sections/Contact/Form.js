@@ -1,7 +1,7 @@
 // Dependencies
 import { Formik, Field, Form } from 'formik';
 
-const ContactForm = ({ translation }) => (
+const ContactForm = ({ translation, showSuccScreen }) => (
   <div className="form__parent">
     <Formik
       initialValues={{
@@ -11,7 +11,8 @@ const ContactForm = ({ translation }) => (
       }}
       onSubmit={async (values) => {
         await new Promise((r) => setTimeout(r, 500));
-        alert(JSON.stringify(values, null, 2));
+        console.log('asdas');
+        showSuccScreen();
       }}
     >
       <Form className="form">
