@@ -30,11 +30,25 @@
   @include navbarDefaultGroup;
 
   &__container-menu-button {
-    cursor: pointer;
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    background-color: $green-color;
+    width: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      @include hoverAnim;
+      width: 20px;
+      cursor: pointer;
+    }
+
+    div {
+      @include hoverAnim;
+      cursor: pointer;
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background-color: $green-color;
+    }
   }
 
   &__container {
@@ -55,13 +69,22 @@
     &-information {
       @include information;
 
+      &-paragraph {
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+
       &-hide {
         width: 100%;
         display: flex;
         justify-content: flex-end;
 
         .navbar__container-menu-button {
-          background-color: $red-color;
+          div {
+            background-color: $red-color;
+          }
         }
       }
       &-button {
@@ -92,6 +115,10 @@
         &-paragraph {
           @include funcionality(none);
         }
+      }
+
+      &-menu-button {
+        width: 40px;
       }
     }
   }
