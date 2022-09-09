@@ -19,7 +19,7 @@
   font-size: 11px;
   font-weight: 400;
   line-height: 13px;
-  font-family: Robot-Regular-Italic;  
+  font-family: Robot-Regular-Italic;
 }
 @mixin textGroupCopy {
   color: $white-color;
@@ -28,15 +28,13 @@
   line-height: 13px;
   font-family: Robot-Regular;
 }
-.copyright-spam{
-  margin-right:3px ;
+.copyright-spam {
+  margin-right: 3px;
   @include textGroupCopy();
 }
 .footer {
+  @include globalSectionPadding;
   @include footerDefaultGroup;
-  padding-left: 61px;
-  padding-bottom: 32px;
-  padding-right: 36px;
 
   &-right {
     text-align: right;
@@ -45,18 +43,15 @@
       @include textGroupCopy();
       &-paragraf {
         display: flex;
-        
-
       }
     }
   }
 
   &-left {
     display: flex;
-    &-linkedinGithub{
+    &-linkedinGithub {
       display: flex;
       flex-direction: column;
-
     }
     &-text {
       @include textGroup;
@@ -64,17 +59,13 @@
 
     &-linkedin {
       @include itemMaxBreakGroup(8px);
-      
-      
     }
     &-behance {
       @include itemMaxBreakGroup(7px);
-      
     }
 
     &-github {
       @include itemMaxBreakGroup(8px);
-      
     }
 
     &-link {
@@ -83,7 +74,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
   .copyright-spam {
     overflow: hidden;
     width: 0px;
@@ -91,9 +82,6 @@
     @include textGroupCopy();
   }
   .footer {
-    padding-left: 41px;
-    padding-bottom: 32px;
-    padding-right: 41px;
     &-right {
       text-align: right;
       &-copyright {
@@ -110,24 +98,20 @@
 
     &-left {
       display: flex;
-      &-linkedinGithub{
+      &-linkedinGithub {
         display: flex;
         flex-direction: column;
-  
       }
 
       &-linkedin {
         @include itemMaxBreakGroup(7px);
-        
       }
 
       &-github {
         @include itemMaxBreakGroup(7px);
-        
       }
       &-behance {
         @include itemMaxBreakGroup(7px);
-       
       }
 
       &-link {

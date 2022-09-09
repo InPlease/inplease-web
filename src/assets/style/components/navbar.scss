@@ -58,7 +58,7 @@
       &-hide {
         width: 100%;
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
 
         .navbar__container-menu-button {
           background-color: $red-color;
