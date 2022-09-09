@@ -1,6 +1,7 @@
 @mixin h1Left {
   font-size: 14px;
   font-weight: 400;
+  width: 70px;
 }
 
 @mixin items-title {
@@ -32,32 +33,32 @@
 
 .ourvoice {
   @include ourVoiceDefaultGroup;
-  
-  
+  @include globalSectionPadding;
+
+  &__title {
+    @include funcionality(none);
+  }
 
   &__container {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 35px;
-    
-    
 
     &-left {
       &-title {
-        width: 70px;
         @include h1Left;
       }
 
-      &-post{
-          @include items-post;
-          @include funcionality(none);
-        
+      &-post {
+        @include items-post;
+        @include funcionality(none);
       }
     }
 
     &-right {
       display: flex;
+
       gap: 35px;
       width: 878px;
 
@@ -68,6 +69,7 @@
         max-width: 277px;
         height: 131px;
         position: relative;
+
         &-content {
           @include items-content;
         }
@@ -75,8 +77,6 @@
         &-title {
           @include items-title;
         }
-
-        
 
         &-information {
           display: flex;
@@ -100,23 +100,30 @@
 
 @media (max-width: 1100px) {
   .ourvoice {
-    
+    &__title {
+      @include funcionality(initial);
+      &-hero {
+        font-size: 14px;
+        font-weight: 400;
+        color: $green-color;
+      }
 
-    &__container{
+      &-post {
+        font-weight: 400;
+        font-size: 24px;
+      }
+    }
+    &__container {
+      margin-top: 20px;
       display: flex;
       flex-direction: column;
       justify-content: start;
       align-items: start;
-      &-left{
-        
-        
-        &-title{
-          color: $green-color;
-        }
+      overflow: auto;
+      width: 90vw;
 
-        &-post{
-          @include funcionality(initial);
-        }
+      &-left {
+        @include funcionality(none);
       }
     }
   }

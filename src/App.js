@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 // Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Ourvoice from './components/Sections/Ourvoice/Ourvoice';
 
 // Hooks
 import { useMenu } from './hooks/useMenu';
@@ -23,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <Navbar showMenu={isShow} showMenuEvent={goMenuManager} />
+      <Ourvoice />
       <Routes>
         <Route path="/" element={<h1>Home</h1>} />
         <Route path="/about" element={<h1>About</h1>} />

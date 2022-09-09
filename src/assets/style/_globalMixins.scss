@@ -22,6 +22,15 @@
   background-color: $black-color;
 }
 
+@mixin ourVoiceDefaultGroup {
+  max-width: 1206;
+  height: 221px;
+  color: $white-color;
+  align-items: center;
+  justify-content: start;
+  margin-top: 30px;
+}
+
 /* Ball Button */
 @mixin ball-button {
   height: 8px;
