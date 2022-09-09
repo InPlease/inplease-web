@@ -1,8 +1,18 @@
+// Dependencies
+import { useTranslation } from 'react-i18next';
+
 // assets
-import link_image from '../assets/img/icon/InPlease.svg'
-import link_image_responsive from '../assets/img/icon/inplease-logo-mobile.svg'
+import link_image from '../assets/img/icon/InPlease.svg';
+import link_image_responsive from '../assets/img/icon/inplease-logo-mobile.svg';
+import eath_icon from '../assets/img/icon/earth-icon.svg';
 
 function Navbar({ showMenu, showMenuEvent }) {
+  const { i18n } = useTranslation();
+
+  const changeLanguage = () => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en');
+  };
+
   return (
     <nav>
       <div className="navbar">
@@ -39,17 +49,19 @@ function Navbar({ showMenu, showMenuEvent }) {
                 </p>
               </div>
             )}
-            <div
-              className="navbar__container-menu-button"
-              onClick={() => showMenuEvent()}
-            >
-              <span></span>
+            <div className="navbar__container-menu-button">
+              <img
+                src={eath_icon}
+                alt="earth icon, use to change the language of the page"
+                onClick={() => changeLanguage()}
+              />
+              <div onClick={() => showMenuEvent()}></div>
             </div>
           </div>
         </div>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
