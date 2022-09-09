@@ -29,3 +29,14 @@
   background-color: $green-color;
   border-radius: 50%;
 }
+
+// Anims
+@mixin hoverAnim {
+  opacity: 0.7;
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 1;
+    transform: 0.3s;
+  }
+}
