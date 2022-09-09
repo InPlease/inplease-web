@@ -16,18 +16,18 @@ import Menu from './components/Menu'
 import { textScheme } from './i18n/textStore'
 
 function App() {
-  const [isShow, isShowEvent] = useMenu()
+  const [isShow, goMenuManager] = useMenu()
   const [translation] = useTranslate(textScheme)
-
   const { menu } = translation()
+
   return (
     <div className="App">
-      <Navbar showMenu={isShow} showMenuEvent={isShowEvent} />
+      <Navbar showMenu={isShow} showMenuEvent={goMenuManager} />
       <Routes>
-        <Route path="/" element={<h1>Home</h1>} />
-        <Route path="about" element={<h1>About</h1>} />
-        <Route path="contact" element={<h1>Contact</h1>} />
-        <Route path="menu" element={<Menu menuTexts={menu} />} />
+        <Route path="/home" element={<h1>Home</h1>} />
+        <Route path="/about" element={<h1>About</h1>} />
+        <Route path="/contact" element={<h1>Contact</h1>} />
+        <Route path="/menu" element={<Menu menuTexts={menu} />} />
       </Routes>
       <Footer />
     </div>
