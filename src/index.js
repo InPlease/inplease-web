@@ -10,6 +10,9 @@ import App from './App'
 // Style
 import './assets/style/index.scss'
 
+// i18n
+import './i18n/setup'
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <BrowserRouter>

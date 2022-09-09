@@ -1,5 +1,17 @@
-import React from 'react'
+// Dependencies
+import React, { useEffect } from 'react'
 
-const MenuComponent = () => {}
+// Hooks
+import { useTranslate } from '../hooks/useTranslate'
+
+const MenuComponent = ({ menuTexts }) => {
+  return (
+    <ul>
+      {menuTexts.map((e) => (
+        <li>{e}</li>
+      ))}
+    </ul>
+  )
+}
 
 export default MenuComponent
