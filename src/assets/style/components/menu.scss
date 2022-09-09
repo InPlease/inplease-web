@@ -1,0 +1,36 @@
+.menu {
+  @include globalSectionPadding;
+  height: 100%;
+  color: white;
+  font-size: 48px;
+  line-height: 57px;
+  font-family: Robot-Medium;
+
+  li {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 33px 0px 21px 0px;
+    list-style-type: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $green-color;
+      text-decoration: underline;
+
+      div {
+        @include ball-button;
+        margin: 0px 0px 0px 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

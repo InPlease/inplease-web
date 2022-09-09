@@ -1,14 +1,14 @@
 // Dependencies
 import React, { useEffect } from 'react'
 
-// Hooks
-import { useTranslate } from '../hooks/useTranslate'
-
 const MenuComponent = ({ menuTexts }) => {
   return (
-    <ul>
+    <ul className="menu">
       {menuTexts.map((e) => (
-        <li>{e}</li>
+        <li>
+          {e}
+          <div></div>
+        </li>
       ))}
     </ul>
   )
