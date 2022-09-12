@@ -7,7 +7,7 @@ import FormSuccess from './FormSuccessScreen';
 
 const Contact = ({ translation }) => {
   const [show, setShowSuccess] = useState(false);
-  const { title, formulary } = translation;
+  const { title, formulary, successMessage } = translation;
   const showSuccessScreen = () => {
     setShowSuccess(!show);
   };
@@ -25,7 +25,12 @@ const Contact = ({ translation }) => {
           showSuccScreen={showSuccessScreen}
         />
       </div>
-      {show && <FormSuccess closeEvent={showSuccessScreen} />}
+      {show && (
+        <FormSuccess
+          translation={successMessage}
+          closeEvent={showSuccessScreen}
+        />
+      )}
     </section>
   );
 };

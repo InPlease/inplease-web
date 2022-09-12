@@ -10,10 +10,8 @@ export const useMenu = () => {
   const [isShow, setIsShow] = useState(false);
 
   useEffect(() => {
-    if (location.pathname === '/menu') {
-      setIsShow(true);
-    }
-  }, [location.pathname]);
+    location.pathname === '/menu' ? setIsShow(true) : setIsShow(false);
+  }, [location]);
 
   const goMenuManager = () => {
     setIsShow(!isShow);
