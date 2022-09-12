@@ -14,9 +14,16 @@
     list-style-type: none;
     cursor: pointer;
 
+    a {
+      color: $white-color;
+      text-decoration: none;
+    }
+
     &:hover {
-      color: $green-color;
-      text-decoration: underline;
+      a {
+        color: $green-color;
+        text-decoration: underline;
+      }
 
       div {
         @include ball-button;

@@ -1,7 +1,12 @@
 {
   "en": {
     "translation": {
-      "menu": ["Home", "About Us", "Our Work", "Contact Us"],
+      "menu": [
+        { "name": "Home", "path": "/" },
+        { "name": "About Us", "path": "/about" },
+        { "name": "Our Work", "path": "/work" },
+        { "name": "Contact Us", "path": "/contact" }
+      ],
       "contanct": {
         "title": {
           "1": "We",
@@ -14,13 +19,22 @@
           "email": "Email",
           "phone": "Phone",
           "submit": "Send"
+        },
+        "successMessage": {
+          "scream": "Ahooooy!",
+          "information": "Thank you for buying a seat, we will confirm the flight soon."
         }
       }
     }
   },
   "es": {
     "translation": {
-      "menu": ["Inicio", "Nosotros", "Proyectos", "Contactanos"],
+      "menu": [
+        { "name": "Inicio", "path": "/" },
+        { "name": "Nosotros", "path": "/about" },
+        { "name": "Proyectos", "path": "/work" },
+        { "name": "Contactanos", "path": "/contact" }
+      ],
       "contacTitlte": "Queremos estar contigo, durante todo el proceso",
       "contanct": {
         "title": {
@@ -34,6 +48,10 @@
           "email": "Correo",
           "phone": "Telefono",
           "submit": "Enviar"
+        },
+        "successMessage": {
+          "scream": "Hurraaaa!",
+          "information": "Gracias por comprar un asiento, pronto confirmaremos el vuelo."
         }
       }
     }
