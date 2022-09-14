@@ -1,4 +1,5 @@
-import Container from './Container';
+import ContainerLeft from './ContainerLeft';
+import ContainerRight from './ContainerRight';
 
 function Ourvoice() {
   return (
@@ -7,7 +8,10 @@ function Ourvoice() {
         <h2 className="ourvoice__title-hero">Our voice</h2>
         <h1 className="ourvoice__title-post">Post</h1>
       </div>
-      <Container />
+      <div className="ourvoice__container">
+        <ContainerLeft title="Our voice" post="Post" />
+        <ContainerRight />
+      </div>
     </div>
   );
 }

@@ -25,9 +25,8 @@ function App() {
   return (
     <div className="App">
       <Navbar showMenu={isShow} showMenuEvent={goMenuManager} />
-      <Home />
       <Routes>
-        <Route path="/" element={<h1>Home</h1>} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<h1>About</h1>} />
         <Route path="/contact" element={<Contact translation={contanct} />} />
         <Route path="/menu" element={<Menu menuTexts={menu} />} />
