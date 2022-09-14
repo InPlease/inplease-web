@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 // Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Home from './components/Sections/Home/Home';
 
 // Hooks
 import { useMenu } from './hooks/useMenu';
@@ -25,7 +26,7 @@ function App() {
     <div className="App">
       <Navbar showMenu={isShow} showMenuEvent={goMenuManager} />
       <Routes>
-        <Route path="/" element={<h1>Home</h1>} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<h1>About</h1>} />
         <Route path="/contact" element={<Contact translation={contanct} />} />
         <Route path="/menu" element={<Menu menuTexts={menu} />} />
