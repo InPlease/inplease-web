@@ -24,6 +24,57 @@
           "scream": "Ahooooy!",
           "information": "Thank you for buying a seat, we will confirm the flight soon."
         }
+      },
+      "about": {
+        "title": {
+          "1": "We were born as a",
+          "2": "dream",
+          "3": ", we became a crazy ",
+          "4": "idea",
+          "5": " and ended up being a ",
+          "6": "reality"
+        },
+        "content": "InPlease was born as a dream, an idea and a reality. We created the company not to be a competition but an opportunity for artists to express themselves in their own way, a way in which juniors and seniors come together to build great products. InPlease is a cry of fury.",
+        "section": [
+          {
+            "title": " Creativity",
+            "firstTitle": "We love what we do",
+            "secondTitle": "We understand the market",
+            "firstContent": "Lorem Ipsum",
+            "secondContent": "Lorem Ipsum"
+          },
+          {
+            "title": " Technology",
+            "firstTitle": "We are nerds",
+            "secondTitle": "We are trained",
+            "firstContent": "Lorem Ipsum",
+            "secondContent": "Lorem Ipsum"
+          }
+        ],
+        "ourFamily" :{
+          "title": "Our Family",
+          "content": " Let's build something different, let's create art. "
+        },
+        "carousel": [
+          {
+            "name": "Jhornan Colina",
+            "rol": "Founder",
+            "info": "Life has led me to go in many directions, one of them programming and design. I feel that the world is a great canvas where we can express our ideas, we still have a lot to go through, but I know that this will be incredible.",
+            "phrase": "More than ideas, dreams"
+            
+          },
+          {
+            "name": "Denis Sanchez",
+            "rol": "Developer",
+            "info": "Insert",
+            "phrase": "Insert"
+          }, {
+            "name": "Yorman Gonzales",
+            "rol": "Developer",
+            "info": "Insert",
+            "phrase": "Insert"
+          }
+        ]
       }
     }
   },
@@ -53,6 +104,56 @@
           "scream": "Hurraaaa!",
           "information": "Gracias por comprar un asiento, pronto confirmaremos el vuelo."
         }
+      },
+      "about": {
+        "title": {
+          "1": "Nosotros nacemos como",
+          "2": "sueño",
+          "3": ", Nosotros nos convertimos en una loca ",
+          "4": "idea",
+          "5": " y terminó siendo una ",
+          "6": "realidad"
+        },
+        "content": "InPlease nació como un sueño, una idea y una realidad. Creamos la compañía no para ser una competencia, sino una oportunidad para que los artistas se expresen a su manera, una forma en la que jóvenes y adultos se unen para crear grandes productos. InPlease es un grito de furia.",
+        "section": [
+          {
+            "title": " Creatividad",
+            "firstTitle": "Amamos lo que hacemos",
+            "secondTitle": "Entendemos el mercado",
+            "firstContent": "Lorem Ipsum",
+            "secondContent": "Lorem Ipsum"
+          },
+          {
+            "title": " Tecnologia",
+            "firstTitle": "Somos nerds",
+            "secondTitle": "Estamos capacitados",
+            "firstContent": "Lorem Ipsum",
+            "secondContent": "Lorem Ipsum"
+          }
+        ],
+        "ourFamily" :{
+          "title": "Nuestra Familia",
+          "content": " Construyamos algo diferente, hagamos arte. "
+        },
+        "carousel": [
+          {
+            "name": "Jhornan Colina",
+            "rol": "Fundador",
+            "info": "La vida me ha llevado a ir en muchas direcciones, una de ellas la programación y el diseño. Siento que el mundo es un gran lienzo donde podemos expresar nuestras ideas, aún nos queda mucho por recorrer, pero sé que esto será increíble.",
+            "phrase": "Mas que ideas, sueños"
+          },
+          {
+            "name": "Denis Sanchez",
+            "rol": "Desarrollador",
+            "info": "Inserte",
+            "phrase": "Inserte"
+          }, {
+            "name": "Yorman Gonzales",
+            "rol": "Desarrollador",
+            "info": "Inserte",
+            "phrase": "Inserte"
+          }
+        ]
       }
     }
   }

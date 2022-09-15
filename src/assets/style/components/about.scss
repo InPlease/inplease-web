@@ -1,0 +1,155 @@
+@mixin textGroup {
+    color: $white-color;
+  }
+@mixin sectiosTitlesGroup{
+  font-size: 24px;
+  font-family: Robot-Medium; 
+  margin:0px 0px 20px 0px;
+  font-weight: 500;
+}
+@mixin sectionsContentGroup{
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+  .about {
+    @include aboutDefaulGroup;
+    @include textGroup();
+    @include globalSectionPadding;
+
+    &-title {
+      font-size: 35px;
+      text-align: center;
+      font-family: Robot-Medium;
+      margin:33px 0px 33px 0px;
+      font-weight: 500;
+
+      &-textColor {
+        color: $green-color;
+        size: 72px;
+        word-spacing: 0.3px;
+      }
+    }
+    &-paragraf {
+      margin:0px 0px 43px 0px;
+      font-size: 14px;
+      text-align: center;
+      font-weight: 400;
+    }
+    &-sections {
+      margin:0px 0px 120px 0px;
+     
+        &-title {
+          margin:0px 0px 34px 0px;
+          font-size: 35px;
+          font-weight: 400;
+        }
+        &-firstTitle {
+          @include sectiosTitlesGroup()
+        }
+
+        &-secondTitle {
+          @include sectiosTitlesGroup()
+        }
+        &-firstContent {
+          @include sectionsContentGroup()
+        }
+
+        &-secondContent {
+          @include sectionsContentGroup()
+        } 
+    }
+    
+    &-ourFamily {
+      display: flex;
+      flex-direction: column;
+      margin: 0px 0px 58px 0px;
+
+      &-title {
+        text-align: center;
+        font-size: 48px;
+        font-family: Roboto-Thin-Italic;
+        font-weight: 400;
+        margin: 0px 0px 50px 0px;
+      }
+      
+    }
+    &-lema {
+      font-size: 18px;
+      margin: 58px 25px 58px 25px;
+      text-align: center;
+      font-weight: 600;
+      font-family: Robot-Regular-Italic;
+    }
+    &-button {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0px 40px 0px;
+      
+      &-Contact {
+        color: $white-color;
+        background-color: $black-color;
+        border-color: $green-color;
+        border-radius: 20px;
+        width: 250px;
+        height: 42px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+    }
+  } 
+  @media (min-width: 714px) {
+   .about{
+      &-title {
+        margin: 34px 0px 34px 0px;
+        font-size: 45px;
+        text-align: left;
+        font-family: Robot-Medium;
+        font-weight: 500;
+        width: 70%;
+      }
+      &-paragraf {
+        margin: 0px 0px 56px 0px;
+        font-size: 18px;
+        text-align: left;
+        width: 60%;
+        font-weight: 400;
+      }
+      &-sections {
+        margin:0px 0px 84px 0px;
+        
+          &-firstComponents {
+            display: flex;
+          }
+          &-title {
+            margin-bottom: 82px;
+            font-size: 48px;
+            font-weight: 400;
+          }
+          &-firstTitle {
+            margin:0px 43px 27px 17%;
+            width: 250px;
+          }
+          &-secondTitle {
+            margin:0px 43px 27px 17%;
+            width: 250px;
+          }
+          &-firstContent {
+            font-size: 18px;
+            margin:0px 0px 34px 0px;
+          }
+          &-secondContent {
+            font-size: 18px;
+            margin:0px 0px 92px 0px;
+          }
+      }
+      &-ourFamily {
+        margin: 0px 0px 234px 0px;
+      }
+      &-lema {
+        margin: 0px 25px 49px 25px;
+        font-size: 36px;
+        font-weight: 400;
+      }
+    }
+  }

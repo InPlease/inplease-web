@@ -1,7 +1,7 @@
 // Global styles
 @import './_typography.scss';
 @import './_colors.scss';
-@import './globalMixins.scss';
+@import './_globalMixins.scss';
 
 // Components
 @import './components/footer.scss';
@@ -10,6 +10,8 @@
 @import './components/menu.scss';
 @import './components/contact.scss';
 @import './components/contactForm.scss';
+@import './components/about.scss';
+@import './components/carousel.scss';
 
 * {
   margin: 0px;
