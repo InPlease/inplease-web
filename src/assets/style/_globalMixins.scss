@@ -40,3 +40,9 @@
     transform: 0.3s;
   }
 }
+/* ABOUT */
+@mixin aboutDefaulGroup {
+  display: flex;
+  flex-direction: column;
+  background-color: $black-color;
+}
