@@ -22,6 +22,8 @@
   background-color: $black-color;
 }
 
+/* Our Voice */
+
 @mixin ourVoiceDefaultGroup {
   max-width: 1206;
   height: 221px;
@@ -48,4 +50,13 @@
     opacity: 1;
     transform: 0.3s;
   }
+}
+
+/* Our skills */
+
+@mixin ourSkillsDefaultGroup {
+  color: $white-color;
+  align-items: center;
+  justify-content: start;
+  margin-top: 30px;
 }
