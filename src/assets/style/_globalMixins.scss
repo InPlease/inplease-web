@@ -51,6 +51,7 @@
     transform: 0.3s;
   }
 }
+<<<<<<< HEAD
 
 /* Our skills */
 
@@ -59,4 +60,11 @@
   align-items: center;
   justify-content: start;
   margin-top: 30px;
+=======
+/* ABOUT */
+@mixin aboutDefaulGroup {
+  display: flex;
+  flex-direction: column;
+  background-color: $black-color;
+>>>>>>> 89c6d208d0cd0757e4115658166afa875bff3915
 }

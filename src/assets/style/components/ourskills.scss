@@ -20,10 +20,13 @@
   flex-direction: column;
   gap: 15px;
   &__title {
-    align-self: flex-start;
-    &-title {
+    &-hidden{
       @include h1Left;
       color: $green-color;
+    }
+    align-self: flex-start;
+    &-title {
+      @include funcionality(none);
     }
 
     &-post {
@@ -45,6 +48,7 @@
         justify-content: space-between;
         align-items: center;
         @include globalSectionPadding;
+        color: $gray-color-02;
 
         &-header {
           @include cards-header-mobile;
@@ -53,6 +57,7 @@
 
       &-title.active {
         border: 1px solid $green-color;
+        color: $white-color;
       }
 
       &-content {
@@ -91,8 +96,15 @@
       justify-content: center;
       height: 100%;
 
+      &-hidden{
+        @include funcionality(none);
+      }
+
       &-title {
         color: $white-color;
+        @include funcionality(inherit);
+        @include h1Left;
+      
       }
       &-post {
         @include funcionality(none);

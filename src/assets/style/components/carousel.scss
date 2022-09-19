@@ -1,0 +1,88 @@
+@mixin textGroup {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+}
+.carousel{
+  display: grid;
+  &-person {
+    @include textGroup();
+    margin: 40px 0px 0px 0px;
+    font-family: Robot-Regular;
+  }
+  &-rol {
+    @include textGroup();
+    font-family: Robot-Regular;
+  }
+  &-info{
+    font-family: Robot-Regular-Italic;
+    @include textGroup();
+    width: 443px;
+    height: 209.3px;
+    margin: 0px 0px 0px 80px;
+  }
+  &-phrase{
+    font-family: Robot-Regular-Italic;
+    width: 415px;
+    height: 114px;
+    font-size: 48px;
+    font-weight: 400;
+    text-align: left;
+    margin: 0px 0px 0px 80px;
+  }
+}
+.swiper {
+   .swiper-pagination-bullet{opacity: .0;}
+    .swiper-button-prev{opacity: .0;}
+    .swiper-button-next{opacity: .0;}
+    width: 100%;
+    height: 100%;
+    
+    &-wrapper{
+      width: 100%;
+      height: 100%;
+    }
+    &-slide {
+      text-align: center;
+      font-size: 18px;
+      background: $black-color;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+    }
+    &-slide img {
+      display: block;
+      width: 100%;
+      height:372.7px ;
+      object-fit: cover;
+    }
+  }
+  
+  
+  @media (max-width: 714px) {
+    .carousel{
+      &-info{
+        font-size: 0px;
+        width: 0px;
+        height: 0px;
+      }
+      &-phrase{
+
+        width: 0px;
+        height: 0px;
+        font-size: 0px;
+    
+      }
+      &-content{
+        width: 0px;
+      }
+    }
+   
+  }

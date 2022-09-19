@@ -5,7 +5,11 @@ function Home() {
   return (
     <div>
       <Ourvoice title={'Our voice'} post={'Post'} />
-      <OurSkills title={'Our Skills'} post={'Services'} />
+      <OurSkills
+        title={'Our Services'}
+        post={'Services'}
+        hiddenTitle={'Our Skills'}
+      />
     </div>
   );
 }
