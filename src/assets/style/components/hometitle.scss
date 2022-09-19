@@ -1,0 +1,42 @@
+.hometitle {
+  @include homeTitleDefaultGroup;
+  @include globalSectionPadding;
+
+  &__container {
+    height: 162px;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    &-title {
+      font-size: 35px;
+      font-weight: 500;
+
+     &-green{
+        color: $green-color;
+     }
+    }
+  }
+}
+
+@media (min-width: 450px) {
+  .hometitle {
+    @include homeTitleDefaultGroup;
+    @include globalSectionPadding;
+    justify-content: flex-start;
+
+    &__container {
+      width: 400px;
+      height: 162px;
+      text-align: initial;
+
+      margin-left: 100px;
+      &-title {
+        font-size: 45px;
+        color: $white-color;
+        font-weight: 500;
+      }
+    }
+  }
+}
