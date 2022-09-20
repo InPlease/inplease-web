@@ -22,6 +22,8 @@
   background-color: $black-color;
 }
 
+/* Our Voice */
+
 @mixin ourVoiceDefaultGroup {
   max-width: 1206;
   height: 221px;
@@ -54,4 +56,22 @@
   display: flex;
   flex-direction: column;
   background-color: $black-color;
+}
+
+/* OURSKILLS */
+@mixin ourSkillsDefaultGroup {
+  color: $white-color;
+  align-items: center;
+  justify-content: start;
+  margin-top: 30px;
+}
+
+/* HOMETITLE */
+@mixin homeTitleDefaultGroup{
+  color: $white-color;
+  max-width: 1206px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

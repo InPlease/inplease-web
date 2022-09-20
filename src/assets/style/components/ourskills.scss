@@ -1,0 +1,147 @@
+@mixin cards-content {
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+@mixin cards-header-mobile {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@mixin cards-header {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ourskills {
+  @include globalSectionPadding;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  &__title {
+    &-hidden{
+      @include h1Left;
+      color: $green-color;
+    }
+    align-self: flex-start;
+    &-title {
+      @include funcionality(none);
+    }
+
+    &-post {
+      @include items-post;
+    }
+  }
+  @include ourSkillsDefaultGroup;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    &-dropdown {
+      align-self: flex-start;
+      &-title {
+        border: 1px solid grey;
+        height: 72px;
+        width: 347px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include globalSectionPadding;
+        color: $gray-color-02;
+
+        &-header {
+          @include cards-header-mobile;
+        }
+      }
+
+      &-title.active {
+        border: 1px solid $green-color;
+        color: $white-color;
+      }
+
+      &-content {
+        border: 1px solid $green-color;
+        width: 347px;
+        height: 157px;
+        border-top: none;
+        padding: 40px;
+        @include funcionality(none);
+
+        &-text {
+          @include cards-content;
+        }
+      }
+
+      &-content.active {
+        @include funcionality(inherit);
+      }
+    }
+  }
+}
+
+/*Break*/
+
+@media (min-width: 450px) {
+  .ourskills {
+    display: flex;
+    flex-direction: row;
+    max-width: 639px;
+    height: 133px;
+    @include globalSectionPadding;
+
+    &__title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      &-hidden{
+        @include funcionality(none);
+      }
+
+      &-title {
+        color: $white-color;
+        @include funcionality(inherit);
+        @include h1Left;
+      
+      }
+      &-post {
+        @include funcionality(none);
+      }
+    }
+
+    &__container {
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      &-dropdown {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-title {
+          width: 157px;
+          height: 42px;
+          border-radius: 29px;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          border: 2px solid grey;
+          cursor: pointer;
+
+          &-header {
+            @include cards-header;
+          }
+
+          &-button {
+            @include funcionality(none);
+          }
+        }
+      }
+    }
+  }
+}
